@@ -1,0 +1,187 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Heebo" rel="stylesheet">
+  <title>equithon-crowdcourse-demo</title>
+</head>
+
+<body>
+
+</body>
+
+<!-- <div class="bg-img"></div> -->
+<!-- {{> buttons}} -->
+<!-- {{> content}}-->
+<!-- {{> signup}} -->
+
+<template name="content">
+
+  <div class="homepage">
+    <div class="bg-img">
+      <div class="ctr-slogan">
+        <p>Explore knowledge from anywhere in the world, <br>for <span id="accent">free</span>.</p>
+      </div>
+
+      <button id="explore"><a href="/explore">Explore the Courses</a></button>
+      <a href="" id="modapp">Apply to be a moderator >></a>
+    </div>
+    <!-- <img class="bg-img" src="/homepage-bg.jpg" alt="Homepage background"> -->
+
+  </div>
+
+</template>
+
+<template name ="navbar">
+
+  <div class="top-btns">
+    <button id="signup-btn">SIGN UP</button>
+    <button id="login-btn">LOG IN</button>
+  </div>
+  {{> yield}}
+</template>
+
+<template name="signup">
+
+  <div class="sign-up hide">
+    <h2>Sign up</h2>
+    <form>
+      <input type="text" placeholder="Full name" name="fullname">
+      <input type="text" placeholder="Email address" name="email">
+      <input type="text" placeholder="Username" name="username">
+      <input type="text" placeholder="Password" name="password">
+      <input type="submit" value="Sign up">
+    </form>
+  </div>
+
+</template>
+
+<template name="usertopnav">
+  <div class="headernav">
+    <div id="alert">
+      <p>A live lecture is happening! Join Pysch 101 with Professor Pine to get started with your Psych degree!</p>
+      <button><a href="">Go now!</a></button>
+    </div>
+    <nav class="topnav">
+      <a href="/"><img class="logo" src="/logo.png" alt=""></a>
+      <a href="" class="user"><img class="headshot" src="/headshot.jpg" alt=""></a>
+      <ul>
+        <li id="nav1" class="nav-items active-tab"><a href="">Explore</a></li>
+        <li id="nav2" class="nav-items"><a href="">Categories</a></li>
+        <li id="nav3" class="nav-items"><a href="">My Courses</a></li>
+        <li id="nav4" class="nav-items"><a href="">My Edits</a></li>
+      </ul>
+
+    </nav>
+  </div>
+
+  {{> yield}}
+</template>
+
+<!--TOP NAV FOR MODERATORS-->
+<template name="modtopnav">
+  <div class="headernav">
+    <div id="mod-alert">
+      <p>You are currently logged in as a moderator.</p>
+      <button><a href="/explore">Switch to my regular account</a></button>
+    </div>
+    <nav class="topnav">
+      <a href="/"><img class="logo" src="/logo.png" alt=""></a>
+      <a href="" class="user"><img class="headshot" src="/headshot.jpg" alt=""></a>
+      <ul>
+        <li class="nav-items active-tab"><a href="">Pending</a></li>
+        <li class="nav-items"><a href="">Approved</a></li>
+        <li class="nav-items"><a href="">Rejected</a></li>
+      </ul>
+
+    </nav>
+  </div>
+
+  {{> yield}}
+</template>
+
+<template name="explore">
+  <div id="explore-banner">
+    <div id="banner-content">
+      <h2>Transform what you learn and how you learn today</h2>
+      <div class="search">
+        <input id="search-field" type="text" placeholder="Search...">
+        <!-- <a href=""><img src="/searchicon.png" alt=""></a> -->
+        <!-- <input id="search-submit" type="submit"> -->
+      </div>
+
+      <!-- TODO: add a search icon in the search bar -->
+    </div>
+
+  </div>
+  <div class="explore-main">
+    <div class="explore-header">
+      <!-- <h3>Trending Courses</h3>
+      <a href="">See more...</a> -->
+      <table style="width: 100%;">
+        <tr>
+          <td style="font-size: 18px;">Trending Courses</td>
+          <td style="font-size: 14px; text-align: right; padding-right: 3%;">
+            <a style="text-decoration: none; color: black;" href="">See more...</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="card-nav">
+      <!-- <div id="card-bundle"> -->
+        <div class="card">
+          <img class="card-img" src="/default-course.jpg" alt="Book" style="width: 100%;">
+          <div class="card-details">
+            <h4 class="card-title">Intro to Game Development</h4>
+            <p class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+          </div>
+          <div class="card-btns">
+            <button class="edit-card"><a href="/course/1/edit">Edit</a></button>
+            <button class="enroll-card"><a href="/course/1">Enroll</a></button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img" src="/default-course.jpg" alt="Book" style="width: 100%;">
+          <div class="card-details">
+            <h4 class="card-title">Intro to Microbiology</h4>
+            <p class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+          </div>
+          <div class="card-btns">
+            <button class="edit-card"><a href="">Edit</a></button>
+            <button class="enroll-card"><a href="">Enroll</a></button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img" src="/default-course.jpg" alt="Book" style="width: 100%;">
+          <div class="card-details">
+            <h4 class="card-title">Intro to Microbiology</h4>
+            <p class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+          </div>
+          <div class="card-btns">
+            <button class="edit-card"><a href="">Edit</a></button>
+            <button class="enroll-card"><a href="">Enroll</a></button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img" src="/default-course.jpg" alt="Book" style="width: 100%;">
+          <div class="card-details">
+            <h4 class="card-title">Intro to Microbiology</h4>
+            <p class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+          </div>
+          <div class="card-btns">
+            <button class="edit-card"><a href="">Edit</a></button>
+            <button class="enroll-card"><a href="">Enroll</a></button>
+          </div>
+        </div>
+
+
+      <!-- </div> -->
+    </div>
+  </div>
+
+</template>
+
+<template name="empty">
+
+</template>
